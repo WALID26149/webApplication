@@ -1,0 +1,124 @@
+<%- include('partials/header'); -%>
+
+<div class="container-2">
+
+  <!-- profile section -->
+  <div class="profile">
+      <img class="profile-img" src="https://picsum.photos/200" alt="">
+      <div class="name-of-profile">
+        <h2 class="h2-profile">First Name</h2>
+        <p class="p-profile">@LastName</p>
+      </div>
+       <!-- statistics -->
+       <div class="statistics">
+         <!-- posts -->
+         <div class="Posts">
+           <div class="post">35</div>
+           <p class="p-post">Posts</p>
+         </div>
+
+         <hr class="hr">
+         <!-- followers -->
+         <div class="Followers">
+           <div class="follower">100K</div>
+           <p class="p-follower">Followers</p>
+         </div>
+
+         <hr class="hr-2">
+         <!-- following -->
+         <div class="Following">
+           <div class="following">526</div>
+           <p class="p-following">Following</p>
+         </div>
+       </div>
+       <!-- settings -->
+       <div class="Settings">
+         <!-- icon -->
+         <i class="lni icon lni-grid-alt"></i>
+         <!-- feed btn -->
+           <button class="feed-btn" type="submit" name="button">Feed</button>
+         <!-- icon -->
+         <i class="lni icon-2 lni-search-alt"></i>
+         <!-- exprole btn -->
+         <form  action="/exprole" method="post">
+           <button class="exprole-btn" type="submit" name="button">Exprole</button>
+         </form>
+         <!-- icon -->
+         <i class="lni icon-3 lni-alarm"></i>
+         <!-- notifications btn -->
+         <form  action="/notifications" method="post">
+           <button class="notifications-btn" type="submit" name="button">Notifications</button>
+         </form>
+         <!-- icon -->
+         <i class="lni icon-4 lni-cog"></i>
+         <!-- settign btn -->
+         <form action="/setting" method="post">
+           <button class="settings-btn" type="submit" name="button">Settings</button>
+         </form>
+         <hr class="hr-3">
+         <!-- icon -->
+         <i class="lni icon-5 lni-exit-up"></i>
+         <!-- logout btn -->
+         <form  action="/logout" method="post">
+           <button class="logout-btn" type="submit" name="button">Logout</button>
+         </form>
+       </div>
+  </div>
+
+  <!-- home page sectio -->
+  <div class="home-page">
+    <!-- navbar -->
+    <div class="navbar">
+      <nav>
+        <form class="d-flex search-bar" role="search">
+           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-srearch btn-outline-success" type="submit">Search</button>
+        </form>
+          <ul class="ul">
+           <i class="lni ntf-icon lni-alarm"></i>
+           <i class="lni envelope-icon lni-envelope"></i>
+         </ul>
+         <button class="btn-add-photos" type="submit" name="button">Add Photo</button>
+        </nav>
+    </div>
+    <!-- content of the application -->
+    <div class="body-content">
+      <h2>Stories</h2>
+        <!-- First story -->
+        <img class="story-img" src="https://picsum.photos/200" alt="img-1">
+        <!-- secand story -->
+        <img class="story-img-2" src="https://picsum.photos/200" alt="img-2">
+        <!-- thred story -->
+        <img class="story-img-3" src="https://picsum.photos/200" alt="img-3">
+        <!-- forthe story -->
+        <img class="story-img-4" src="https://picsum.photos/200" alt="img-4">
+      <!-- post section -->
+      <h2>Feed</h2>
+      <div class="post-photo">
+        <img class="post-img" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="img">
+        <!-- profile -->
+        <img class="post-profile-img" src="https://picsum.photos/200" alt="img">
+        <div class="like">
+          <i class="lni lni-heart"></i>
+          512
+        </div>
+        <div class="comment">
+          <i class="lni lni-comments"></i>
+          100
+        </div>
+      </div>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+           Excepteur sint occaecat cupidatat non proident,
+           sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+      </div>
+    </div>
+  </div>
+    <div class="overlay hidden"></div>
+</div>
+
+<%- include('partials/footer'); -%>
