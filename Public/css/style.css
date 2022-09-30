@@ -37,33 +37,43 @@ body::-webkit-scrollbar-thumb {
 .hidden{
   display: none;
 }
-
-.form-signin {
+/* cookie modal */
+.cookie-modal{
+  height: 250px;
+  width: 25%;
+  background-color: #F5F5F5;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+  margin: 15px;
+  position: absolute;
+  top: 31rem;
+  left: 52rem;
+}
+.fixed{
+  position: fixed;
+}
+.btn-cookie{
+  border: 0;
+  border-radius: 7px;
+  padding:8px 15px;
+  background: linear-gradient(to top left, #e66465, #9198e5);
+  color: #fff;
+}
+.form-signin ,.form-signin-2{
  background-color: #fff;
  max-width: 330px;
+ height: 410px;
  padding: 15px;
  text-align: center;
  border: 1px solid #dfe6e9;
  border-radius: 10px;
  transition: 0.3s;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+ box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
-
-.form-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    top: 17.7rem;
-    width: 100%;
-    height: 100%;
-    padding: 1rem 0.75rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    pointer-events: none;
-    border: 1px solid transparent;
-    transform-origin: 0 0;
-    transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+.form-signin-2{
+  height: 460px;
 }
 
 .form-signin .form-floating:focus-within {
@@ -71,6 +81,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .form-signin input[type="email"] {
+ margin-bottom: -1px;
+ border-bottom-right-radius: 0;
+ border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="text"] {
  margin-bottom: -1px;
  border-bottom-right-radius: 0;
  border-bottom-left-radius: 0;

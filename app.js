@@ -12,15 +12,26 @@ app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
 // Data Base section
 mongoose.connect("mongodb://localhost:27017/webapplicationDB", {useNewUrlParser: true});
 
+// schema to signUp
 const userSchema = new mongoose.Schema({
   email:String,
   password:String
 });
+// schema to create account
+const userCSchema = new mongoose.Schema({
+  firstName:String,
+  lastName:String,
+  password:String,
+});
 
+// the mongoose  modal
 const User = mongoose.model('User', userSchema);
+const UserC = mongoose.model('UserC', userCSchema);
+
 
 //get the root
 app.get('/', function(req , res) {
@@ -41,22 +52,41 @@ app.post('/', function(req, res) {
     });
   });
 
-});
+})
+
 // get the create account root
-app.get('/crtAcc', function(req, res) {
-  // res.render("crtAcc")
+// app.get('/crtAcc', function(req, res) {
+//   res.render("crtAcc")
+// });
+// app.post('/crtAcc', function(req, res) {
+//   res.render("crtAcc")
+//   bcrypt.hash(req.body.Password, saltRounds, function(err, hash) {
+//     const userCreate = new UserC ({
+//       firstName:req.body.firstName,
+//       lastName: req.body.lastName,
+//       password:hash
+//     });
+//     userCreate.save(function(err) {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         res.render('home')
+//       }
+//     });
+//   });
+// })
+// Back to the signUp page
+app.post('/signUp', function(req, res) {
+  res.redirect("/")
 });
-app.post('/crtAcc', function(req, res) {
-  res.render("crtAcc")
-})
-// get the exprole root
-app.get('/exprole', function(req, res) {
-  // res.sendFile(__dirname + "/exprole.ejs")
-  res.render("exprole");
-})
-app.post('/exprole', function(req, res) {
-  res.render("exprole")
-});
+// // get the exprole root
+// app.get('/exprole', function(req, res) {
+//   res.sendFile(__dirname + "/exprole.ejs")
+//   res.render("exprole");
+// })
+// app.post('/exprole', function(req, res) {
+//   res.render("exprole")
+// });
 // get the logout root
 app.post('/logout', function(req, res) {
   res.redirect('/');
