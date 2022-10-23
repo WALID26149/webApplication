@@ -1,0 +1,81 @@
+/* //////////  signUp section  ////////// */
+.container{
+  margin:105px auto;
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+.h1-signUp{
+  padding: 10px 7%;
+  margin: 15px 0;
+}
+.signUp-form{
+  height:310px;
+  width: 330px;
+  margin: 25px 0 25px 7%;
+}
+/* the signUp button */
+.signUpBtn{
+  padding: 10px 15px;
+  border: 0;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #87A2FB;
+  margin:20px 0;
+  display: block;
+  width: 285px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: 0.3s
+}
+.signUpBtn:hover{
+  background-color: #4C6793;
+  transition: 0.3s
+}
+.signUpHr{
+  width: 250px;
+  margin: 0 15px;
+}
+/* style of inputs */
+.inp{
+  display: block;
+  padding: 10px 0 10px 10px;
+  border: 1.5px solid #BBBBBB;
+  border-radius: 5px;
+  width: 273px;
+}
+label{
+  display: block;
+  padding: 10px 0;
+  border: 0;
+  border-radius: 5px;
+  width: 285px;
+}
+/* style the Oauth section */
+.Oauth{
+  height:40px
+}
+/* login section style */
+.loginBtn{
+  margin:0 5px 10px 10px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  background-color:#87A2FB;
+  padding: 5px 15px;
+  display: inline-block;
+  transition: 0.4s;
+  position: absolute;
+}
+.loginBtn:hover{
+  border: 0.5px solid #BBBBBB;
+  color: #000;
+  background-color: #fff;
+  transition: 0.4s;
+}
+.pLogin{
+  color: grey;
+  margin: 5px 0 25px 70px;
+  display: inline-block;
+}

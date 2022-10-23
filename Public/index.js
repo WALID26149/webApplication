@@ -1,11 +1,12 @@
-const cookie = document.querySelector(".cookie-modal");
-const btnCookie = document.querySelector(".btn-cookie");
+const btnDisplay = document.querySelector('.btnDisplay');
+const profile = document.querySelector('.profile');
+const homePage = document.querySelector('.home-page');
 
-const myTimeout = setTimeout(myGreeting, 3000);
-
-function myGreeting() {
-  cookie.classList.remove('hidden');
-}
-btnCookie.addEventListener('click', function() {
-  cookie.classList.add('hidden');
+btnDisplay.addEventListener('click', function() {
+  profile.classList.toggle('hidden');
+  homePage.style.width ="100%";
+  // if (document.maxWidth ="1025px") {
+  //   profile.style.display = "block";
+  //   profile.style.display = "none"
+  // }
 });

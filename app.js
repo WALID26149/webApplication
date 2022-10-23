@@ -21,17 +21,9 @@ const userSchema = new mongoose.Schema({
   email:String,
   password:String
 });
-// schema to create account
-const userCSchema = new mongoose.Schema({
-  firstName:String,
-  lastName:String,
-  password:String,
-});
 
 // the mongoose  modal
 const User = mongoose.model('User', userSchema);
-const UserC = mongoose.model('UserC', userCSchema);
-
 
 //get the root
 app.get('/', function(req , res) {
@@ -40,7 +32,7 @@ app.get('/', function(req , res) {
 app.post('/', function(req, res) {
   bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
     const newUser = new User ({
-      email: req.body.username,
+      email: req.body.email,
       password: hash
     });
     newUser.save(function(err) {
@@ -52,36 +44,16 @@ app.post('/', function(req, res) {
     });
   });
 
-})
-
-// get the create account root
-// app.get('/crtAcc', function(req, res) {
-//   res.render("crtAcc")
-// });
-// app.post('/crtAcc', function(req, res) {
-//   res.render("crtAcc")
-//   bcrypt.hash(req.body.Password, saltRounds, function(err, hash) {
-//     const userCreate = new UserC ({
-//       firstName:req.body.firstName,
-//       lastName: req.body.lastName,
-//       password:hash
-//     });
-//     userCreate.save(function(err) {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         res.render('home')
-//       }
-//     });
-//   });
-// })
-// Back to the signUp page
-app.post('/signUp', function(req, res) {
-  res.redirect("/")
 });
-// // get the exprole root
+
+app.get('/login', function(req, res) {
+  // res.render('login');
+});
+app.post('/login', function(req, res) {
+  res.render('login')
+})
+//get the exprole root
 // app.get('/exprole', function(req, res) {
-//   res.sendFile(__dirname + "/exprole.ejs")
 //   res.render("exprole");
 // })
 // app.post('/exprole', function(req, res) {

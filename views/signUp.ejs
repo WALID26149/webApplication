@@ -1,31 +1,25 @@
 <%- include('partials/header'); -%>
 <div class="container">
+  <div class="signUpCart">
+    <h1 class="h1-signUp">Please Sign Up</h1>
+  <form class="signUp-form" action="/" method="post">
+    <!-- email input -->
+    <label>Email</label>
+    <input class="inp emailInput" type="text" name="email">
+    <!-- password input -->
+    <label>PassWord</label>
+    <input class="inp passwordInput" type="password" name="password">
+    <!-- signUp button -->
+    <button class="signUpBtn" type="submit" name="button">Sign Up</button>
+    <hr class="signUpHr">
+    <div class="Oauth">
 
-  <main class="form-signin w-100 m-auto">
-    <form action="/" method="post">
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-      <div class="form-floating">
-        <input type="email" class="form-control" name="username" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="inputPassword form-control" name="password" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" id="btn-signin" type="submit">Sign in</button>
-    </form>
-    <form  action="/crtAcc" method="post">
-      <button class="btn-crtAcc" type="submit" name="button">Create Account</button>
-    </form>
-      <p class="p-copyRight text-muted">Walid Allan &copy; 2022</p>
-  </main>
-
+    </div>
+  </form>
+  <form class="userLogin" action="login" method="post">
+    <p class="pLogin">Already a User ?</p>
+    <button class="loginBtn" type="submit" name="button">Login</button>
+  </form>
+  </div>
 </div>
 <%- include('partials/footer'); -%>

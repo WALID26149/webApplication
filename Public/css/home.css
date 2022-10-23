@@ -1,0 +1,134 @@
+body{
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  overflow-x:hidden;
+  background-color: #F5F5F5;
+}
+/* //////////  home page section  ////////// */
+/* scrolle bar style */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(46, 83, 120, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: grey;
+    border: 1.5px solid #fff;
+}
+
+.hidden{
+  display: none;
+}
+
+/* cookie modal */
+/* .cookie-modal{
+  height: 250px;
+  width: 25%;
+  background-color: #F5F5F5;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+  margin: 15px;
+  position: absolute;
+  top: 31rem;
+  left: 52rem;
+} */
+.home-page{
+  height: 49.2rem;
+  width: 75%;
+  background-color: #fff;
+  /* position: absolute;
+  left: 26rem; */
+  border-radius: 15px 0 0 15px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+nav {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:2% 5rem;
+  margin: 20px;
+  background: #fff;
+}
+ul{
+  margin: 0;
+}
+.btn-srearch{
+  padding: 10px 15px;
+  color: #fff;
+  background: linear-gradient(to top left, #e66465, #9198e5);
+  border: 0;
+  border-radius: 5px;
+}
+.srearchInput{
+  background-color: #F5F5F5;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 25px;
+  width: 65%;
+}
+.btn-add-photos{
+  color: #000;
+  border: 1px solid grey;
+  border-radius: 7px;
+  background: linear-gradient(to top left, #e66465, #9198e5);
+  padding: 10px 40px;
+  margin:0 5px 0 50px;
+  position: relative;
+  right: 10px;
+  color: #F5F5F5;
+  font-size: 15px;
+}
+.body-content{
+  padding-left: 3.2rem;
+  margin-left: 3.2rem
+}
+.story-img ,.story-img-2 ,.story-img-3 ,.story-img-4{
+  border-radius: 50%;
+  border: 4px solid #e66465;
+  padding: 6px;
+  height: 100px;
+  margin: 15px 8px 30px 0;
+}
+.post-profile-img{
+  height: 45px;
+  border: 3px solid #e66465;
+  border-radius: 50%;
+  padding: 4px;
+  margin:20px 0 0 5px;
+  display: block;
+}
+/* button display profile */
+.displayProfile{
+  position: relative;
+  right: 20px
+}
+.btnDisplay{
+  font-size: 25px;
+  padding: 5px 10px;
+  border-radius: 20%;
+  border: 1px solid grey;
+}
+/* tablet size */
+@media (max-width: 1025px) {
+  .profile{
+    display: none;
+  }
+  .home-page{
+    width: 100%;
+  }
+  .displayProfile{
+    
+  }
+}

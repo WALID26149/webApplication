@@ -3,34 +3,10 @@
 <div class="container-2">
 
   <!-- profile section -->
-  <div class="profile">
-      <img class="profile-img" src="https://picsum.photos/200" alt="">
-      <div class="name-of-profile">
-        <h2 class="h2-profile">First Name</h2>
-        <p class="p-profile">@LastName</p>
-      </div>
-       <!-- statistics -->
-       <div class="statistics">
-         <!-- posts -->
-         <div class="Posts">
-           <div class="post">35</div>
-           <p class="p-post">Posts</p>
-         </div>
-
-         <hr class="hr">
-         <!-- followers -->
-         <div class="Followers">
-           <div class="follower">100K</div>
-           <p class="p-follower">Followers</p>
-         </div>
-
-         <hr class="hr-2">
-         <!-- following -->
-         <div class="Following">
-           <div class="following">526</div>
-           <p class="p-following">Following</p>
-         </div>
-       </div>
+      <div class="profile">
+        <div class="profileDes">
+          <img src="" alt="">
+        </div>
        <!-- settings -->
        <div class="Settings">
          <!-- icon -->
@@ -63,21 +39,18 @@
            <button class="logout-btn" type="submit" name="button">Logout</button>
          </form>
        </div>
-  </div>
+       </div>
+      </div>
 
   <!-- home page sectio -->
   <div class="home-page">
     <!-- navbar -->
     <div class="navbar">
       <nav>
-        <form class="d-flex search-bar" role="search">
-           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="search-bar" role="search">
+           <input class="srearchInput form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-srearch btn-outline-success" type="submit">Search</button>
         </form>
-          <ul class="ul">
-           <i class="lni ntf-icon lni-alarm"></i>
-           <i class="lni envelope-icon lni-envelope"></i>
-         </ul>
          <button class="btn-add-photos" type="submit" name="button">Add Photo</button>
         </nav>
     </div>
@@ -94,28 +67,12 @@
         <img class="story-img-4" src="https://picsum.photos/200" alt="img-4">
       <!-- post section -->
       <h2>Feed</h2>
-      <div class="post-photo">
-        <img class="post-img" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="img">
-        <!-- profile -->
-        <img class="post-profile-img" src="https://picsum.photos/200" alt="img">
-        <div class="like">
-          <i class="lni lni-heart"></i>
-          512
-        </div>
-        <div class="comment">
-          <i class="lni lni-comments"></i>
-          100
-        </div>
-      </div>
-<!-- the cookie modal -->
-          <div class="cookie-modal hidden">
-              <h1>cookie modal</h1>
-              <button class="btn-cookie" type="button" name="button">Ok</button>
-          </div>
-
+    </div>
+    <div class="displayProfile">
+     <button class="btnDisplay " type="button" name="button">
+       <i class="lni lni-angle-double-right"></i>
+     </button>
     </div>
   </div>
-    <div class="overlay hidden"></div>
-</div>
 
 <%- include('partials/footer'); -%>
