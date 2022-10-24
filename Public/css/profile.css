@@ -3,6 +3,10 @@
   height: 49.2rem;
   width:390px;
 }
+/* show profile  */
+.toggelBetween{
+  display: block;
+}
 /* Setting btns */
 .Settings{
   /* display: inline-block; */
