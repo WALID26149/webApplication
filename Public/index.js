@@ -10,6 +10,6 @@ btnDisplay.addEventListener('click', function() {
 });
 btnNav.addEventListener('click', function() {
   if (document.maxWidth ="1025px") {
-    profile.classList.toggle('toggelBetween')
+    profile.classList.toggle('toggelBetween');
   }
 });

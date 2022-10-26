@@ -5,7 +5,11 @@
   <!-- profile section -->
       <div class="profile">
         <div class="profileDes">
-          <img src="" alt="">
+          <img class="img-profile" src="https://picsum.photos/200" alt="">
+          <div class="text-profile">
+            <h1 class="h1-profile">Your Name</h1>
+            <p class="p-profile">Your Sec Name</p>
+          </div>
         </div>
        <!-- settings -->
        <div class="Settings">
@@ -44,6 +48,7 @@
 
   <!-- home page sectio -->
   <div class="home-page">
+
     <!-- navbar -->
     <div class="navbar">
       <nav>
@@ -53,6 +58,12 @@
         </form>
          <button class="btn-add-photos" type="submit" name="button">Add Photo</button>
         </nav>
+        <!-- navbar profile -->
+        <div class="navProfile">
+          <button class="navBtn" type="button" name="button">
+            <i class="lni lni-grid-alt"></i>
+          </button>
+        </div>
     </div>
     <!-- content of the application -->
     <div class="body-content">
@@ -73,12 +84,7 @@
        <i class="lni lni-angle-double-right"></i>
      </button>
      </div>
-     <!-- navbar profile -->
-     <div class="navProfile">
-       <button class="navBtn" type="button" name="button">
-         <i class="lni lni-grid-alt"></i>
-       </button>
-     </div>
+
   </div>
 
 <%- include('partials/footer'); -%>

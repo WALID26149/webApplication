@@ -17,13 +17,19 @@ app.use(bodyParser.urlencoded({
 mongoose.connect("mongodb://localhost:27017/webapplicationDB", {useNewUrlParser: true});
 
 // schema to signUp
-const userSchema = new mongoose.Schema({
+const signUpSchema = new mongoose.Schema({
+  email:String,
+  password:String
+});
+// schema to login
+const loginSchema = new mongoose.Schema({
   email:String,
   password:String
 });
 
 // the mongoose  modal
-const User = mongoose.model('User', userSchema);
+const SignUp = mongoose.model('SignUp', signUpSchema);
+const Login = mongoose.model('Login', loginSchema)
 
 //get the root
 app.get('/', function(req , res) {
@@ -31,7 +37,7 @@ app.get('/', function(req , res) {
 });
 app.post('/', function(req, res) {
   bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
-    const newUser = new User ({
+    const newUser = new SignUp ({
       email: req.body.email,
       password: hash
     });
@@ -47,10 +53,23 @@ app.post('/', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-  // res.render('login');
+  res.render('login');
 });
 app.post('/login', function(req, res) {
-  res.render('login')
+  res.render('login');
+  bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
+    const newUser = new Login ({
+      email: req.body.email,
+      password: hash
+    });
+    newUser.save(function(err) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.render('home')
+      }
+    });
+  });
 })
 //get the exprole root
 // app.get('/exprole', function(req, res) {
