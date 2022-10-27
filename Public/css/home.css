@@ -84,9 +84,7 @@ ul{
   border-radius: 7px;
   background: linear-gradient(to top left, #e66465, #9198e5);
   padding: 10px 40px;
-  margin:0 5px 0 50px;
-  position: relative;
-  right: 10px;
+  margin:0 5px 0 30px;
   color: #F5F5F5;
   font-size: 15px;
 }

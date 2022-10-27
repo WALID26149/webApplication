@@ -3,6 +3,10 @@
   height: 49.2rem;
   width:390px;
 }
+.profileDes{
+  position: relative;
+  top: 45px;
+}
 .profileDes img{
   margin-left: auto;
   margin-right: auto;
@@ -26,11 +30,41 @@
 }
 /* Setting btns */
 .Settings{
-  display: inline-block;
+  /* display: inline-block; */
+  margin: 10px;
+  position:relative;
+  top: 70px;
+  left: 50px
 }
-/* .exprole-btn{
-  display: contents;
+.hr-3{
+  width: 60%;
+  margin:20px 0 20px 0;
 }
-.icon-2{
-  display: flex;
-} */
+/* style the buttons */
+.feed-btn
+,.exprole-btn
+,.notifications-btn
+,.settings-btn
+,.logout-btn{
+  padding: 5px 10px;
+  font-size: 15px;
+  margin: 10px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+.icon
+,.icon-2
+,.icon-3
+,.icon-4
+,.icon-5{
+  position: relative;
+  top: 4px;
+  font-size: 25px;
+}
+.icon{
+  color: #FF9494
+}
+.feed-btn{
+  border: 1px solid #FF9494
+}
