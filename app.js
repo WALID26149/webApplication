@@ -33,9 +33,10 @@ const Login = mongoose.model('Login', loginSchema)
 
 //get the root
 app.get('/', function(req , res) {
-  res.render("signUp");
+  // res.render("signUp");
 });
-app.post('/', function(req, res) {
+app.post('/signUp', function(req, res) {
+  // res.render("signUp");
   bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
     const newUser = new SignUp ({
       email: req.body.email,
@@ -45,7 +46,8 @@ app.post('/', function(req, res) {
       if (err) {
         console.log(err);
       } else {
-        res.render('home')
+        const myFName = "walidAllan";
+        res.render('home', {YourName: myFName})
       }
     });
   });
@@ -53,7 +55,7 @@ app.post('/', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-  res.render('login');
+  // res.render('login');
 });
 app.post('/login', function(req, res) {
   res.render('login');

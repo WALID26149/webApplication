@@ -31,7 +31,7 @@
 /* Setting btns */
 .Settings{
   /* display: inline-block; */
-  margin: 10px;
+  margin: 30px 10px;
   position:relative;
   top: 70px;
   left: 50px
@@ -52,6 +52,15 @@
   border: 0;
   border-radius: 10px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.3s
+}
+.feed-btn:hover
+,.exprole-btn:hover
+,.notifications-btn:hover
+,.settings-btn:hover
+,.logout-btn:hover{
+  padding: 5px 20px;
+  transition: 0.3s;
 }
 .icon
 ,.icon-2

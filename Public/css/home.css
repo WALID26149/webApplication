@@ -29,20 +29,43 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
-/* cookie modal */
-/* .cookie-modal{
-  height: 250px;
-  width: 25%;
-  background-color: #F5F5F5;
+/* insert your name modal */
+.insertName{
+  height: 100px;
+  width: 40%;
   border: 0;
-  border-radius: 7px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  transition: 0.2s;
-  margin: 15px;
-  position: absolute;
-  top: 31rem;
-  left: 52rem;
-} */
+  border-radius: 10px;
+  background-color: #F3E3F3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem 5rem;
+  box-shadow: 0 4rem 6rem rgb(0 0 0 / 30%);
+  z-index: 1000;
+  transition: all 0.5s
+}
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+.closeModalBtn{
+  position: relative;
+  bottom: 40px;
+  left: 42rem;
+  display: inline-block;
+  border: 0;
+  background-color: #F3E3F3;
+  font-size: 3rem;
+  cursor: pointer;
+}
 .home-page{
   height: 49.2rem;
   width: 75%;
@@ -57,7 +80,7 @@ nav {
   display: flex;
   justify-content:space-between;
   align-items: center;
-  padding:2% 5rem;
+  padding:2% 1rem 2% 5rem;
   margin: 20px;
   background: #fff;
 }
@@ -70,6 +93,7 @@ ul{
   background: linear-gradient(to top left, #e66465, #9198e5);
   border: 0;
   border-radius: 5px;
+  cursor: pointer;
 }
 .srearchInput{
   background-color: #F5F5F5;
@@ -84,9 +108,10 @@ ul{
   border-radius: 7px;
   background: linear-gradient(to top left, #e66465, #9198e5);
   padding: 10px 40px;
-  margin:0 5px 0 30px;
+  margin:0 0 0 10px;
   color: #F5F5F5;
   font-size: 15px;
+  cursor: pointer;
 }
 .body-content{
   padding-left: 3.2rem;
@@ -148,5 +173,11 @@ ul{
   }
   .displayProfile{
     display: none;
+  }
+}
+/* reponsive for mobile */
+@media (max-width:700px) {
+  .home-page{
+
   }
 }

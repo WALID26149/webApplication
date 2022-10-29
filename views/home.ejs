@@ -7,8 +7,8 @@
         <div class="profileDes">
           <img class="img-profile" src="https://picsum.photos/200" alt="">
           <div class="text-profile">
-            <h1 class="h1-profile">Your Name</h1>
-            <p class="p-profile">Your Sec Name</p>
+            <h1 class="h1-profile"><%= YourName %></h1>
+            <p class="p-profile">YourSecName</p>
           </div>
         </div>
        <!-- settings -->
@@ -46,7 +46,7 @@
        </div>
       </div>
 
-  <!-- home page sectio -->
+  <!-- home page section -->
   <div class="home-page">
 
     <!-- navbar -->
@@ -84,7 +84,12 @@
        <i class="lni lni-angle-double-right"></i>
      </button>
      </div>
-
+     <div class="insertName hidden">
+       <button class="closeModalBtn" type="submit" name="button">×</button>
+       <input type="text" name="yourName">
+       <button type="submit" name="button">Submit</button>
+     </div>
+     <div class="overlay hidden"></div>
   </div>
 
 <%- include('partials/footer'); -%>
