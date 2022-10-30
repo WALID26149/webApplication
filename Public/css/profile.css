@@ -28,6 +28,12 @@
 .toggelBetween{
   display: block;
 }
+.copyright{
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 5px 0;
+}
 /* Setting btns */
 .Settings{
   /* display: inline-block; */

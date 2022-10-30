@@ -42,6 +42,9 @@
            <i class="lni icon-5 lni-exit-up"></i>
            <button class="logout-btn" type="submit" name="button">Logout</button>
          </form>
+         <footer>
+           <p class="copyright">Walid Allan copyright © 2022</p>
+          </footer>
        </div>
        </div>
       </div>
@@ -85,9 +88,12 @@
      </button>
      </div>
      <div class="insertName hidden">
-       <button class="closeModalBtn" type="submit" name="button">×</button>
-       <input type="text" name="yourName">
-       <button type="submit" name="button">Submit</button>
+       <button class="closeModalBtn" type="submit" name="button">&times;</button>
+       <form  action="/signUp" method="post">
+         <h1 class="h1-modal">Put your name here:</h1>
+         <input class="input-modal" type="text" name="yourName">
+         <button class="btn-modal" type="submit" name="button">Submit</button>
+       </form>
      </div>
      <div class="overlay hidden"></div>
   </div>

@@ -30,10 +30,5 @@ const closeModalFn = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 }
+// the btn to close modal
 closeModal.addEventListener('click', closeModalFn);
-
-// const myTimeout = (myGreeting, 5000);
-//
-// function myStopFunction() {
-//   clearTimeout(myTimeout);
-// }

@@ -31,11 +31,11 @@ body::-webkit-scrollbar-thumb {
 
 /* insert your name modal */
 .insertName{
-  height: 100px;
+  height: 110px;
   width: 40%;
   border: 0;
   border-radius: 10px;
-  background-color: #F3E3F3;
+  background-color: #F5F5F5;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -57,13 +57,34 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.5s;
 }
 .closeModalBtn{
-  position: relative;
-  bottom: 40px;
-  left: 42rem;
   display: inline-block;
   border: 0;
-  background-color: #F3E3F3;
   font-size: 3rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  cursor: pointer;
+}
+.h1-modal{
+  padding: 5px 5px 5px 0;
+  margin: 0 0 10px 0
+}
+.input-modal{
+  border: 0;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #BBBBBB
+}
+.btn-modal{
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background: linear-gradient(to top left, #e66465, #9198e5);
+  color: #fff;
   cursor: pointer;
 }
 .home-page{
@@ -170,14 +191,9 @@ ul{
   }
   .home-page{
     width: 100%;
+    height: 2000px;
   }
   .displayProfile{
     display: none;
-  }
-}
-/* reponsive for mobile */
-@media (max-width:700px) {
-  .home-page{
-
   }
 }

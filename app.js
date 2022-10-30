@@ -33,10 +33,13 @@ const Login = mongoose.model('Login', loginSchema)
 
 //get the root
 app.get('/', function(req , res) {
-  // res.render("signUp");
+  // res.render("signUp")
 });
+// app.post('/', function (req, res) {
+//   res.render("home")
+// });
 app.post('/signUp', function(req, res) {
-  // res.render("signUp");
+  res.render("signUp");
   bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
     const newUser = new SignUp ({
       email: req.body.email,
@@ -46,7 +49,7 @@ app.post('/signUp', function(req, res) {
       if (err) {
         console.log(err);
       } else {
-        const myFName = "walidAllan";
+        const myFName = req.body.yourName;
         res.render('home', {YourName: myFName})
       }
     });
@@ -72,14 +75,8 @@ app.post('/login', function(req, res) {
       }
     });
   });
-})
-//get the exprole root
-// app.get('/exprole', function(req, res) {
-//   res.render("exprole");
-// })
-// app.post('/exprole', function(req, res) {
-//   res.render("exprole")
-// });
+});
+
 // get the logout root
 app.post('/logout', function(req, res) {
   res.redirect('/');
