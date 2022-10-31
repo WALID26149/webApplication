@@ -11,7 +11,7 @@
   margin: 15px 0;
 }
 .signUp-form ,.Login-form{
-  height:310px;
+  /* height:310px; */
   width: 330px;
   margin: 25px 0 25px 7%;
 }
@@ -23,7 +23,7 @@
   color: #fff;
   border-radius: 5px;
   background-color: #87A2FB;
-  margin:20px 0;
+  margin:20px auto;
   display: block;
   width: 285px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -35,8 +35,9 @@
 }
 .signUpHr ,.LoginHr{
   width: 250px;
-  margin: 0 15px;
+  margin: 20px auto;
 }
+
 /* style of inputs */
 .inp{
   display: block;
@@ -54,9 +55,9 @@ label{
 }
 /* style the Oauth section */
 .Oauth{
-  height:40px
+  height:50px
 }
-/* login section style */
+/* login switch btn section style */
 .loginBtn{
   margin:0 5px 10px 10px;
   border: 0;
@@ -76,6 +77,6 @@ label{
 }
 .pLogin{
   color: grey;
-  margin: 5px 0 25px 70px;
+  margin: 5px 0 25px 65px;
   display: inline-block;
 }

@@ -33,11 +33,16 @@ const Login = mongoose.model('Login', loginSchema)
 
 //get the root
 app.get('/', function(req , res) {
-  // res.render("signUp")
+  // res.render("/")
 });
-// app.post('/', function (req, res) {
-//   res.render("home")
-// });
+app.post('/', function (req, res) {
+  const myFName = req.body.yourName;
+  res.render("home", {YourName: myFName})
+});
+
+app.get('/signUp', function(req, res) {
+  res.render('signUp')
+});
 app.post('/signUp', function(req, res) {
   res.render("signUp");
   bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
@@ -49,8 +54,7 @@ app.post('/signUp', function(req, res) {
       if (err) {
         console.log(err);
       } else {
-        const myFName = req.body.yourName;
-        res.render('home', {YourName: myFName})
+        res.render('home')
       }
     });
   });
@@ -79,7 +83,7 @@ app.post('/login', function(req, res) {
 
 // get the logout root
 app.post('/logout', function(req, res) {
-  res.redirect('/');
+  res.redirect('/signUp');
 });
 
 
