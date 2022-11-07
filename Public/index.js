@@ -5,6 +5,9 @@ const btnNav = document.querySelector('.navBtn');
 const modal = document.querySelector('.insertName');
 const overlay = document.querySelector('.overlay');
 const closeModal = document.querySelector('.closeModalBtn');
+const btnAddText = document.querySelector('.btn-add-text');
+const textArea = document.querySelector('.addBlogText');
+const btnPublish = document.querySelector('.btnPublish');
 
 btnDisplay.addEventListener('click', function() {
   profile.classList.toggle('hidden');
@@ -32,3 +35,15 @@ const closeModalFn = function () {
 }
 // the btn to close modal
 closeModal.addEventListener('click', closeModalFn);
+
+// add a blog text to the feed section
+btnAddText.addEventListener('click', function() {
+    textArea.classList.remove('hidden');
+    textArea.style.position = "absolute";
+    textArea.style.display = "inline-block";
+});
+
+btnPublish.addEventListener('click', function() {
+  textArea.classList.remove('hidden');
+  btnPublish.style.display = "none";
+});

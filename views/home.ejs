@@ -1,6 +1,5 @@
 <%- include('partials/header'); -%>
-
-<div class="container-2">
+ <div class="container-2">
 
   <!-- profile section -->
       <div class="profile">
@@ -59,7 +58,7 @@
            <input class="srearchInput form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-srearch btn-outline-success" type="submit">Search</button>
         </form>
-         <button class="btn-add-photos" type="submit" name="button">Add Text Blog</button>
+         <button class="btn-add-text" type="submit" name="button">Add Text Blog</button>
         </nav>
         <!-- navbar profile -->
         <div class="navProfile">
@@ -79,6 +78,10 @@
         <img class="story-img-3" src="https://picsum.photos/200" alt="img-3">
       <!-- post section -->
       <h2>Feed</h2>
+      <div class="addBlogText hidden">
+        <textarea class="textArea" name="name" rows="8" cols="80"></textarea>
+        <button  class="btnPublish" type="submit" name="button">Publish</button>
+      </div>
     </div>
     <div class="displayProfile">
      <button class="btnDisplay " type="button" name="button">
@@ -95,5 +98,4 @@
      </div>
      <div class="overlay hidden"></div>
   </div>
-
 <%- include('partials/footer'); -%>
