@@ -18,7 +18,6 @@ mongoose.connect("mongodb://localhost:27017/webapplicationDB", {useNewUrlParser:
 
 // schema to signUp
 const signUpSchema = new mongoose.Schema({
-  nameOfUser:String,
   emailToSignUp:String,
   passwordToSignUp:String
 });
@@ -39,6 +38,7 @@ app.get('/', function(req , res) {
 app.post('/', function (req, res) {
   const myFName = req.body.yourName;
   res.render("home", {YourName: myFName});
+
   bcrypt.hash(req.body.passwordSignUp , saltRounds, function(err, hash) {
     const newUser = new SignUp ({
       emailToSignUp: req.body.emailSignUp,

@@ -6,8 +6,7 @@ const modal = document.querySelector('.insertName');
 const overlay = document.querySelector('.overlay');
 const closeModal = document.querySelector('.closeModalBtn');
 const btnAddText = document.querySelector('.btn-add-text');
-const textArea = document.querySelector('.addBlogText');
-const btnPublish = document.querySelector('.btnPublish');
+let textArea = document.querySelector('.addBlogText');
 
 btnDisplay.addEventListener('click', function() {
   profile.classList.toggle('hidden');
@@ -22,7 +21,7 @@ btnNav.addEventListener('click', function() {
 });
 
 // show modal to insert name
-setTimeout(openModal = function (e) {
+setTimeout(openModal = function () {
   // e.preventDefault();
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
@@ -38,12 +37,7 @@ closeModal.addEventListener('click', closeModalFn);
 
 // add a blog text to the feed section
 btnAddText.addEventListener('click', function() {
-    textArea.classList.remove('hidden');
+    textArea.innerHTML = '<textarea class="textArea" name="name" rows="8" cols="80"></textarea>';
     textArea.style.position = "absolute";
     textArea.style.display = "inline-block";
-});
-
-btnPublish.addEventListener('click', function() {
-  textArea.classList.remove('hidden');
-  btnPublish.style.display = "none";
 });

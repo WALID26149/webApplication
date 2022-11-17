@@ -201,6 +201,7 @@ ul{
   padding: 5px 15px;
   background: linear-gradient(to top left, #e66465, #9198e5);
   color: #fff;
+  cursor: pointer;
   transition: 0.3s
 }
 .btnPublish:hover{
