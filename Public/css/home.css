@@ -28,7 +28,11 @@ body::-webkit-scrollbar-thumb {
 .hidden{
   display: none;
 }
-
+/* application err */
+.err{
+  text-align: center;
+  margin: 10% 0;
+}
 /* insert your name modal */
 .insertName{
   height: 110px;
@@ -88,11 +92,9 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 .home-page{
-  height: 49.2rem;
+  height: 49.5rem;
   width: 75%;
   background-color: #fff;
-  /* position: absolute;
-  left: 26rem; */
   border-radius: 15px 0 0 15px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   transition: 0.3s;

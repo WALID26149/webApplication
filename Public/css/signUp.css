@@ -29,12 +29,17 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: 0.3s
 }
+.LoginBtn{
+  margin: 20px auto
+}
 .signUpBtn:hover ,.LoginBtn:hover{
   background-color: #4C6793;
   transition: 0.3s
 }
 .signUpHr ,.LoginHr{
   width: 250px;
+}
+.signUpHr{
   margin: 0 18px;
 }
 

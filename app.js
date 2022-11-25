@@ -18,18 +18,11 @@ mongoose.connect("mongodb://localhost:27017/webapplicationDB", {useNewUrlParser:
 
 // schema to signUp
 const signUpSchema = new mongoose.Schema({
-  emailToSignUp:String,
-  passwordToSignUp:String
+  email:String,
+  password:String
 });
-// schema to login
-// const loginSchema = new mongoose.Schema({
-//   emailToLogin:String,
-//   passwordToLogin:String
-// });
-
 // the mongoose  modal
 const SignUp = mongoose.model('SignUp', signUpSchema);
-// const Login = mongoose.model('Login', loginSchema);
 
 //get the root
 app.get('/', function(req , res) {
@@ -39,10 +32,10 @@ app.post('/', function (req, res) {
   const myFName = req.body.yourName;
   res.render("home", {YourName: myFName});
 
-  bcrypt.hash(req.body.passwordSignUp , saltRounds, function(err, hash) {
+  bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
     const newUser = new SignUp ({
-      emailToSignUp: req.body.emailSignUp,
-      passwordToSignUp: hash
+      email: req.body.email,
+      password: hash
     });
     newUser.save(function(err) {
       if (err) {
@@ -53,7 +46,35 @@ app.post('/', function (req, res) {
     });
   });
 });
+// to switch between signup & login
+app.post('/signUp', function(req, res) {
+  res.render('signUp')
+});
 
+// login root
+app.get('/login', function(req, res) {
+  res.render('login')
+});
+app.post('/login', function(req, res){
+  res.render('login');
+  const emailLogin = req.body.email;
+  const passwordLogin = req.body.password;
+
+  SignUp.findOne({email: emailLogin}, function(err, foundUser) {
+    if (err) {
+      console.log(err);
+      res.redirect('appErr');
+    } else {
+      if (foundUser) {
+        bcrypt.compare(password, foundUser.password, function(err, result){
+          if (result === true) {
+            res.render('home')
+          }
+        });
+      }
+    }
+  });
+});
 // get the logout root
 app.post('/logout', function(req, res) {
   res.redirect('/');
