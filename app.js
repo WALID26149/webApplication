@@ -35,8 +35,11 @@ app.get('/home', function(req, res) {
   res.render('home')
 });
 app.post('/home', function(req, res) {
-  const myFName = req.body.yourName;
-  res.render("home", {YourName: myFName});
+  res.render("home", {YourName: req.body.yourName});
+});
+// app err
+app.get('/appErr', function(req, res) {
+  res.render('appErr')
 });
 
 //get the root
@@ -53,26 +56,32 @@ app.post('/signUp', function(req , res) {
       if (err) {
         console.log(err);
       } else {
-        res.render('signUp')
+        res.render('home', {YourName: req.body.yourName})
       }
     });
   });
 });
 
 // login root
-app.post('/login', function(req, res){
+app.get('/login', function(req, res) {
   res.render('login');
-  const email = req.body.username;
+});
+app.post('/login', function(req, res){
+  const username = req.body.username;
   const password = req.body.password;
 
-  User.findOne({email: email}, function(err, foundUser) {
+  User.findOne({email: username}, function(err, foundUser) {
     if (err) {
       console.log(err);
+      res.redirect('/');
     } else {
       if (foundUser) {
         bcrypt.compare(password, foundUser.password, function(err, result){
           if (result === true) {
             res.render('home')
+          }else{
+            console.log(err);
+            res.redirect('appErr');
           }
         });
       }

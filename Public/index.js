@@ -11,7 +11,6 @@ let textArea = document.querySelector('.addBlogText');
 btnDisplay.addEventListener('click', function() {
   profile.classList.toggle('hidden');
   homePage.style.width ="100%";
-
 });
 // the navbar btn to display the profile in 1025px maxWidth
 btnNav.addEventListener('click', function() {

@@ -9,8 +9,8 @@
       <!-- password input -->
       <label>PassWord</label>
       <input class="inp passwordInput" type="password" name="password">
-    </form>
-    <form action="/home" method="post">
+    <!-- </form> -->
+    <!-- <form action="/home" method="post"> -->
       <!-- Login button -->
         <button class="LoginBtn" type="submit" name="button">Login</button>
       <hr class="LoginHr">
@@ -18,10 +18,8 @@
 
       </div>
     </form>
-    <form class="userLogin" action="/signUp" method="post">
       <p class="pLogin">Create New Account</p>
-      <button class="loginBtn" type="submit" name="button">signUp</button>
-     </form>
+     <a class="loginBtn" href="/signUp">signUp</a>
     </div>
 </div>
 <%- include('partials/footer'); -%>
