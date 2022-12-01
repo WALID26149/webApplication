@@ -2,13 +2,15 @@
 <div class="container">
   <div class="signUpCart">
     <h1 class="h1-signUp">Please Sign Up</h1>
-  <form class="signUp-form" action="/" method="post">
+  <form class="signUp-form" action="/signUp" method="post">
     <!-- email input -->
     <label>Email</label>
-    <input class="inp emailInput" type="text" name="email">
+    <input class="inp emailInput" type="text" name="username">
     <!-- password input -->
     <label>PassWord</label>
     <input class="inp passwordInput" type="password" name="password">
+  </form>
+  <form action="/home" method="post">
     <!-- signUp button -->
     <button class="signUpBtn" type="submit" name="button">Sign Up</button>
     <hr class="signUpHr">

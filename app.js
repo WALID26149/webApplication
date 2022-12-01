@@ -8,7 +8,7 @@ const saltRounds = 12;
 
 const app = express();
 app.use(express.static("Public"));
-app.set("view engine", "ejs")
+app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -21,49 +21,53 @@ const signUpSchema = new mongoose.Schema({
   email:String,
   password:String
 });
-// the mongoose  modal
-const SignUp = mongoose.model('SignUp', signUpSchema);
 
-//get the root
-app.get('/', function(req , res) {
-  res.render("signUp")
+// the mongoose  modal
+const User = mongoose.model('User', signUpSchema);
+
+// the root rout
+app.get('/', function(req, res) {
+  res.render('root');
 });
-app.post('/', function (req, res) {
+
+// get the home root
+app.get('/home', function(req, res) {
+  res.render('home')
+});
+app.post('/home', function(req, res) {
   const myFName = req.body.yourName;
   res.render("home", {YourName: myFName});
+});
 
+//get the root
+app.get('/signUp', function(req , res) {
+  res.render("signUp")
+});
+app.post('/signUp', function(req , res) {
   bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
-    const newUser = new SignUp ({
-      email: req.body.email,
+    const newUser = new User ({
+      email: req.body.username,
       password: hash
     });
     newUser.save(function(err) {
       if (err) {
         console.log(err);
       } else {
-        res.render('home')
+        res.render('signUp')
       }
     });
   });
 });
-// to switch between signup & login
-app.post('/signUp', function(req, res) {
-  res.render('signUp')
-});
 
 // login root
-app.get('/login', function(req, res) {
-  res.render('login')
-});
 app.post('/login', function(req, res){
   res.render('login');
-  const emailLogin = req.body.email;
-  const passwordLogin = req.body.password;
+  const email = req.body.username;
+  const password = req.body.password;
 
-  SignUp.findOne({email: emailLogin}, function(err, foundUser) {
+  User.findOne({email: email}, function(err, foundUser) {
     if (err) {
       console.log(err);
-      res.redirect('appErr');
     } else {
       if (foundUser) {
         bcrypt.compare(password, foundUser.password, function(err, result){
@@ -77,11 +81,11 @@ app.post('/login', function(req, res){
 });
 // get the logout root
 app.post('/logout', function(req, res) {
-  res.redirect('/');
+  res.redirect('signUp');
 });
 
 
-
-app.listen(5000, function () {
-  console.log("server is running on port 5000");
+// local port
+app.listen(3000, function () {
+  console.log("server is running on port 3000");
 });
