@@ -2,11 +2,11 @@ const btnDisplay = document.querySelector('.btnDisplay');
 const profile = document.querySelector('.profile');
 const homePage = document.querySelector('.home-page');
 const btnNav = document.querySelector('.navBtn');
-const modal = document.querySelector('.insertName');
-const overlay = document.querySelector('.overlay');
-const closeModal = document.querySelector('.closeModalBtn');
 const btnAddText = document.querySelector('.btn-add-text');
-let textArea = document.querySelector('.addBlogText');
+const textArea = document.querySelector('.addBlogText');
+// const modal = document.querySelector('.insertName');
+// const overlay = document.querySelector('.overlay');
+// const closeModal = document.querySelector('.closeModalBtn');
 
 btnDisplay.addEventListener('click', function() {
   profile.classList.toggle('hidden');
@@ -20,19 +20,19 @@ btnNav.addEventListener('click', function() {
 });
 
 // show modal to insert name
-setTimeout(openModal = function () {
-  // e.preventDefault();
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-}, 2000);
+// setTimeout(openModal = function () {
+//   // e.preventDefault();
+//   modal.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+// }, 2000);
 
-const closeModalFn = function () {
-  // e.preventDefault();
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-}
+// const closeModalFn = function () {
+//   // e.preventDefault();
+//   modal.classList.add('hidden');
+//   overlay.classList.add('hidden');
+// }
 // the btn to close modal
-closeModal.addEventListener('click', closeModalFn);
+// closeModal.addEventListener('click', closeModalFn);
 
 // add a blog text to the feed section
 btnAddText.addEventListener('click', function() {

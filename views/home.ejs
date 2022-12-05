@@ -7,7 +7,7 @@
           <img class="img-profile" src="https://picsum.photos/200" alt="">
           <div class="text-profile">
             <h1 class="h1-profile"><%= YourName %></h1>
-            <p class="p-profile">Full-Stack Developer</p>
+            <p class="p-profile"><%= Email %></p>
           </div>
         </div>
        <!-- settings -->
@@ -87,14 +87,14 @@
        <i class="lni lni-angle-double-right"></i>
      </button>
      </div>
-     <div class="insertName hidden">
+     <!-- <div class="insertName hidden">
        <button class="closeModalBtn" type="submit" name="button">&times;</button>
        <form  action="/home" method="post">
          <h1 class="h1-modal">Put your name here:</h1>
          <input class="input-modal" type="text" name="yourName">
          <button class="btn-modal" type="submit" name="button">Submit</button>
        </form>
-     </div>
+     </div> -->
      <div class="overlay hidden"></div>
   </div>
 <%- include('partials/footer'); -%>

@@ -18,8 +18,9 @@ mongoose.connect("mongodb://localhost:27017/webapplicationDB", {useNewUrlParser:
 
 // schema to signUp
 const signUpSchema = new mongoose.Schema({
+  name:String,
   email:String,
-  password:String
+  password:String,
 });
 
 // the mongoose  modal
@@ -35,7 +36,7 @@ app.get('/home', function(req, res) {
   res.render('home')
 });
 app.post('/home', function(req, res) {
-  res.render("home", {YourName: req.body.yourName});
+  res.render("home",{Email: req.body.username, YourName: req.body.yourName});
 });
 // app err
 app.get('/appErr', function(req, res) {
@@ -49,6 +50,7 @@ app.get('/signUp', function(req , res) {
 app.post('/signUp', function(req , res) {
   bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
     const newUser = new User ({
+      name:req.body.yourName,
       email: req.body.username,
       password: hash
     });
@@ -56,7 +58,7 @@ app.post('/signUp', function(req , res) {
       if (err) {
         console.log(err);
       } else {
-        res.render('home', {YourName: req.body.yourName})
+        res.render('home',{Email: req.body.username, YourName: req.body.yourName })
       }
     });
   });
@@ -78,7 +80,7 @@ app.post('/login', function(req, res){
       if (foundUser) {
         bcrypt.compare(password, foundUser.password, function(err, result){
           if (result === true) {
-            res.render('home')
+            res.render('home',{Email: req.body.username, YourName: req.body.yourName })
           }else{
             console.log(err);
             res.redirect('appErr');
