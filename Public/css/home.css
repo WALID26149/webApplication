@@ -277,15 +277,16 @@ ul{
     display: none;
   }
 }
-/* tablet size */
+/* tablet size & mobile size */
 @media (max-width: 1025px) {
   .profile{
     display: none;
   }
-  .home-page{
-    width: 100%;
-  }
   .displayProfile{
     display: none;
+  }
+  .home-page{
+    width: 100%;
+    height: 140rem;
   }
 }

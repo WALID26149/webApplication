@@ -34,6 +34,8 @@ btnNav.addEventListener('click', function() {
 // the btn to close modal
 // closeModal.addEventListener('click', closeModalFn);
 
+// check password & email
+
 // add a blog text to the feed section
 btnAddText.addEventListener('click', function() {
     textArea.innerHTML = '<textarea class="textArea" name="name" rows="8" cols="80"></textarea>';

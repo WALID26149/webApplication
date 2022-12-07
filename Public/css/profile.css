@@ -83,3 +83,36 @@
 .feed-btn{
   border: 1px solid #FF9494
 }
+@media (max-width:1025px) {
+  .profile{
+    height:80rem;
+    width: 600px
+  }
+  .img-profile{
+    height: 300px
+  }
+  .text-profile{
+    font-size: 35px
+  }
+  .p-profile{
+    font-size: 35px
+  }
+  .copyright{
+    font-size: 35px
+  }
+  .feed-btn
+  ,.exprole-btn
+  ,.notifications-btn
+  ,.settings-btn
+  ,.logout-btn{
+    padding: 10px 15px;
+    font-size: 45px;
+  }
+  .icon
+  ,.icon-2
+  ,.icon-3
+  ,.icon-4
+  ,.icon-5{
+    font-size: 50px;
+  }
+}
