@@ -12,7 +12,9 @@
 }
 .signUp-form ,.Login-form{
   width: 330px;
-  margin: 25px 0 25px 7%;
+  margin: 25px 0;
+  display: grid;
+  place-items:center;
 }
 /* the signUp button */
 a{
@@ -26,7 +28,7 @@ a{
   border-radius: 5px;
   background-color: #87A2FB;
   margin: 20px 0;
-  display: block;
+  display:block;
   width: 285px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: 0.3s
@@ -56,7 +58,19 @@ label{
 }
 /* style the Oauth section */
 .Oauth{
-  height:60px
+  height:60px;
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Oauth-btn{
+  border: 0;
+  background-color: inherit;
+  font-size: 30px;
+  color: #4C6793;
+  margin: 0 5px;
+  cursor: pointer;
 }
 /* login switch btn section style */
 .loginBtn{
@@ -80,4 +94,34 @@ label{
   color: grey;
   margin: 5px 0 25px 60px;
   display: inline-block;
+}
+/* validation check */
+.validation-check{
+  text-align: left;
+}
+.span-one{
+  padding: 10px 115px 0 0;
+}
+.span-tow{
+  padding: 10px 80px 0 0;
+}
+.span-three{
+  padding: 10px 35px 0 0;
+}
+.validation-check p{
+  color: red;
+  margin: 0;
+  display: inline;
+}
+.validation-check i{
+  color: red;
+  margin: 0 5px;
+  display: inline;
+}
+/* show and hide password */
+.lni-minus::before,.lni-plus::before{
+  position: relative;
+  left: 120px;
+  bottom: 27px;
+  cursor: pointer;
 }

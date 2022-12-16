@@ -35,9 +35,6 @@ app.get('/', function(req, res) {
 app.get('/home', function(req, res) {
   res.render('home')
 });
-app.post('/home', function(req, res) {
-  res.render("home",{Email: req.body.username, YourName: req.body.yourName});
-});
 // app err
 app.get('/appErr', function(req, res) {
   res.render('appErr')
@@ -75,7 +72,6 @@ app.post('/login', function(req, res){
   User.findOne({email: username}, function(err, foundUser) {
     if (err) {
       console.log(err);
-      res.redirect('/');
     } else {
       if (foundUser) {
         bcrypt.compare(password, foundUser.password, function(err, result){
@@ -92,7 +88,7 @@ app.post('/login', function(req, res){
 });
 // get the logout root
 app.post('/logout', function(req, res) {
-  res.redirect('signUp');
+  res.redirect('/');
 });
 
 

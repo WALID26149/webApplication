@@ -4,20 +4,26 @@
       <h1 class="h1-Login">Please Login</h1>
     <form  class="Login-form" action="/login" method="post">
       <label>Name</label>
-      <input class="inp input-modal" type="text" name="yourName">
+      <input class="inp input-modal" type="text" name="yourName" required>
       <!-- email input -->
       <label>Email</label>
-      <input class="inp emailInput" type="text" name="username">
+      <input class="inp emailInput" type="text" name="username" required>
       <!-- password input -->
       <label>PassWord</label>
-      <input class="inp passwordInput" type="password" name="password">
-    <!-- </form> -->
-    <!-- <form action="/home" method="post"> -->
+      <input class="inp passwordInput" type="password" name="password" required>
+      <div class="icons-show-hide">
+        <i class="Hicon lni lni-minus"></i>
+      </div>
       <!-- Login button -->
         <button class="LoginBtn" type="submit" name="button">Login</button>
       <hr class="LoginHr">
       <div class="Oauth">
-
+        <!-- google icon -->
+        <button class="Oauth-btn" type="button" name="button"><i class="lni lni-google"></i></button>
+        <!-- github icon -->
+        <button class="Oauth-btn" type="button" name="button"><i class="lni lni-github-original"></i></button>
+        <!-- facebook icon -->
+        <button class="Oauth-btn" type="button" name="button"><i class="lni lni-facebook-original"></i></button>
       </div>
     </form>
       <p class="pLogin">Create New Account</p>

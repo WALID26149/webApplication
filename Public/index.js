@@ -4,9 +4,7 @@ const homePage = document.querySelector('.home-page');
 const btnNav = document.querySelector('.navBtn');
 const btnAddText = document.querySelector('.btn-add-text');
 const textArea = document.querySelector('.addBlogText');
-// const modal = document.querySelector('.insertName');
-// const overlay = document.querySelector('.overlay');
-// const closeModal = document.querySelector('.closeModalBtn');
+const iconsShowHide = document.querySelector('.icons-show-hide')
 
 btnDisplay.addEventListener('click', function() {
   profile.classList.toggle('hidden');
@@ -18,6 +16,17 @@ btnNav.addEventListener('click', function() {
     profile.classList.toggle('toggelBetween');
   }
 });
+
+// hide and show password
+
+  window.addEventListener('click', function() {
+    alert('ppp')
+    const password = document.querySelector(".passwordInput");
+    if (password.type === "password") {
+      return password.type = "text";
+    }
+    password.type = "password";
+  })
 
 // show modal to insert name
 // setTimeout(openModal = function () {
