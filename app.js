@@ -20,7 +20,7 @@ mongoose.connect("mongodb://localhost:27017/webapplicationDB", {useNewUrlParser:
 const signUpSchema = new mongoose.Schema({
   name:String,
   email:String,
-  password:String,
+  password:String
 });
 
 // the mongoose  modal
@@ -94,5 +94,5 @@ app.post('/logout', function(req, res) {
 
 // local port
 app.listen(process.env.PORT|| 3000, function () {
-  console.log("server is running on port 3000");
+  console.log("server is running");
 });

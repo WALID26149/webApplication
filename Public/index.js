@@ -4,7 +4,6 @@ const homePage = document.querySelector('.home-page');
 const btnNav = document.querySelector('.navBtn');
 const btnAddText = document.querySelector('.btn-add-text');
 const textArea = document.querySelector('.addBlogText');
-const iconsShowHide = document.querySelector('.icons-show-hide')
 
 btnDisplay.addEventListener('click', function() {
   profile.classList.toggle('hidden');
@@ -16,34 +15,6 @@ btnNav.addEventListener('click', function() {
     profile.classList.toggle('toggelBetween');
   }
 });
-
-// hide and show password
-
-  window.addEventListener('click', function() {
-    alert('ppp')
-    const password = document.querySelector(".passwordInput");
-    if (password.type === "password") {
-      return password.type = "text";
-    }
-    password.type = "password";
-  })
-
-// show modal to insert name
-// setTimeout(openModal = function () {
-//   // e.preventDefault();
-//   modal.classList.remove('hidden');
-//   overlay.classList.remove('hidden');
-// }, 2000);
-
-// const closeModalFn = function () {
-//   // e.preventDefault();
-//   modal.classList.add('hidden');
-//   overlay.classList.add('hidden');
-// }
-// the btn to close modal
-// closeModal.addEventListener('click', closeModalFn);
-
-// check password & email
 
 // add a blog text to the feed section
 btnAddText.addEventListener('click', function() {

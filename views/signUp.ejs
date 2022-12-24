@@ -9,9 +9,9 @@
     <label>Email</label>
     <input class="inp emailInput" value="" type="text" name="username" required>
     <!-- password input -->
-    <label>PassWord</label>
+    <label>Password</label>
     <input class="inp passwordInput" value="" type="password" name="password" required>
-      <i class="icons-show-hide lni lni-minus"></i>
+    <i class="show-hide lni lni-circle-plus"></i>
     <!-- signUp button -->
     <button class="signUpBtn" type="submit" name="button">Sign Up</button>
     <hr class="signUpHr">
@@ -24,8 +24,10 @@
       <button class="Oauth-btn" type="button" name="button"><i class="lni lni-facebook-original"></i></button>
     </div>
   </form>
-    <p class="pLogin">Already a User ?</p>
-    <a class="loginBtn" href="/login">Login</a>
+    <div class="login-user">
+      <p class="pLogin">Already a User ?</p>
+      <a class="loginBtn" href="/login">Login</a>
+    </div>
   </div>
 </div>
 <%- include('partials/footer'); -%>

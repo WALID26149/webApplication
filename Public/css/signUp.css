@@ -1,6 +1,6 @@
 /* //////////  signUp section  ////////// */
 .container ,.container-3{
-  margin:85px auto;
+  margin:75px auto;
   background-color: #fff;
   border: 0;
   border-radius: 10px;
@@ -119,9 +119,10 @@ label{
   display: inline;
 }
 /* show and hide password */
-.lni-minus::before,.lni-plus::before{
+.show-hide{
   position: relative;
-  left: 120px;
-  bottom: 27px;
+  bottom: 30px;
+  left: 125px;
+  font-size: 20px;
   cursor: pointer;
 }
