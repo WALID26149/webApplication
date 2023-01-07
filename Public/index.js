@@ -18,7 +18,7 @@ btnNav.addEventListener('click', function() {
 
 // add a blog text to the feed section
 btnAddText.addEventListener('click', function() {
-    textArea.innerHTML = '<textarea class="textArea" name="name" rows="8" cols="80"></textarea>';
+    textArea.innerHTML = '<textarea class="textArea" name="name" rows="8" cols="80" spellcheck="false"></textarea>';
     textArea.style.position = "absolute";
     textArea.style.display = "inline-block";
 });

@@ -46,6 +46,10 @@
   width: 60%;
   margin:20px 0 20px 0;
 }
+/* footer section */
+footer{
+  color: grey;
+}
 /* style the buttons */
 .feed-btn
 ,.exprole-btn
