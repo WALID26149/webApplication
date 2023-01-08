@@ -79,9 +79,7 @@ body::-webkit-scrollbar-thumb {
 .input-modal{
   border: 0;
   border-radius: 5px;
-  margin: 10px 0;
   padding: 10px;
-  background-color: #BBBBBB
 }
 .btn-modal{
   border: 0;
@@ -123,7 +121,7 @@ ul{
   border: 0;
   border-radius: 5px;
   padding: 10px 25px;
-  width: 65%;
+  width: 63%;
 }
 .btn-add-text{
   color: #000;
@@ -210,22 +208,85 @@ ul{
   padding: 5px 20px;
   transition: 0.3s
 }
+/* root style */
+.root-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 350px;
+  width: 55%;
+  border: 4px solid #404258;
+  border-radius: 10px;
+  background-color: #6B728E;
+}
+.h1-root{
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  padding: 0 30px
+}
+/* the root btn */
+.root-signup-btn, .root-login-btn{
+  background-color: #282A3A;
+  padding: 10px 15px;
+  border: 0;
+  font-size: 25px;
+  border-radius: 5px;
+  color: #fff;
+  margin: 5px;
+  transition: 0.3s;
+}
+.root-signup-btn:hover, .root-login-btn:hover{
+  background-color: inherit;
+  border: 0.5px solid #ccc;
+}
+.links{
+  display: inline-flex;
+  position: absolute;
+  top: 15rem;
+}
+.error{
+  margin:2% auto;
+}
+.status-err{
+  font-size: 200px;
+  margin: 5px 0;
+}
+.status-message, .status-err{
+  text-align: center;
+}
+
+.btn-back-home{
+  display: grid;
+  place-items:center;
+  color: #fff;
+  font-size: 25px;
+  border: 0;
+  border-radius: 3px;
+  background-color: #282A3A;
+  padding: 5px 10px;
+  margin: 0 80px
+}
 /* pc size hide the navBtn */
 @media (min-width: 1025px) {
   .navProfile{
     display: none;
   }
 }
-/* tablet size */
+/* tablet size & mobile size */
 @media (max-width: 1025px) {
   .profile{
     display: none;
   }
-  .home-page{
-    width: 100%;
-    /* height: 170rem; */
-  }
   .displayProfile{
     display: none;
+  }
+  .home-page{
+    width: 100%;
+    height: 155rem;
   }
 }

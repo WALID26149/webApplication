@@ -46,6 +46,10 @@
   width: 60%;
   margin:20px 0 20px 0;
 }
+/* footer section */
+footer{
+  color: grey;
+}
 /* style the buttons */
 .feed-btn
 ,.exprole-btn
@@ -82,4 +86,37 @@
 }
 .feed-btn{
   border: 1px solid #FF9494
+}
+@media (max-width:1025px) {
+  .profile{
+    height:70rem;
+    width: 500px
+  }
+  .img-profile{
+    height: 250px
+  }
+  .text-profile{
+    font-size: 30px
+  }
+  .p-profile{
+    font-size: 30px
+  }
+  .copyright{
+    font-size: 30px
+  }
+  .feed-btn
+  ,.exprole-btn
+  ,.notifications-btn
+  ,.settings-btn
+  ,.logout-btn{
+    padding: 10px 15px;
+    font-size: 30px;
+  }
+  .icon
+  ,.icon-2
+  ,.icon-3
+  ,.icon-4
+  ,.icon-5{
+    font-size: 40px;
+  }
 }

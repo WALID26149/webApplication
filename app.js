@@ -8,67 +8,78 @@ const saltRounds = 12;
 
 const app = express();
 app.use(express.static("Public"));
-app.set("view engine", "ejs")
+app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
 // Data Base section
-mongoose.connect("mongodb://localhost:27017/webapplicationDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://walid-allane:walid-databased@cluster0.ithytpt.mongodb.net/?retryWrites=true&w=majority/webapplicationDB", {useNewUrlParser: true});
 
 // schema to signUp
 const signUpSchema = new mongoose.Schema({
+  name:String,
   email:String,
   password:String
 });
+
 // the mongoose  modal
-const SignUp = mongoose.model('SignUp', signUpSchema);
+const User = mongoose.model('User', signUpSchema);
+
+// the root rout
+app.get('/', function(req, res) {
+  res.render('root');
+});
+
+// get the home root
+app.get('/home', function(req, res) {
+  res.render('home')
+});
+// app err
+app.get('/appErr', function(req, res) {
+  res.render('appErr')
+});
 
 //get the root
-app.get('/', function(req , res) {
+app.get('/signUp', function(req , res) {
   res.render("signUp")
 });
-app.post('/', function (req, res) {
-  const myFName = req.body.yourName;
-  res.render("home", {YourName: myFName});
-
+app.post('/signUp', function(req , res) {
   bcrypt.hash(req.body.password , saltRounds, function(err, hash) {
-    const newUser = new SignUp ({
-      email: req.body.email,
+    const newUser = new User ({
+      name:req.body.yourName,
+      email: req.body.username,
       password: hash
     });
     newUser.save(function(err) {
       if (err) {
         console.log(err);
       } else {
-        res.render('home')
+        res.render('home',{Email: req.body.username, YourName: req.body.yourName })
       }
     });
   });
 });
-// to switch between signup & login
-app.post('/signUp', function(req, res) {
-  res.render('signUp')
-});
 
 // login root
 app.get('/login', function(req, res) {
-  res.render('login')
+  res.render('login');
 });
 app.post('/login', function(req, res){
-  res.render('login');
-  const emailLogin = req.body.email;
-  const passwordLogin = req.body.password;
+  const username = req.body.username;
+  const password = req.body.password;
 
-  SignUp.findOne({email: emailLogin}, function(err, foundUser) {
+  User.findOne({email: username}, function(err, foundUser) {
     if (err) {
       console.log(err);
-      res.redirect('appErr');
     } else {
       if (foundUser) {
         bcrypt.compare(password, foundUser.password, function(err, result){
           if (result === true) {
-            res.render('home')
+            res.render('home',{Email: req.body.username, YourName: req.body.yourName })
+          }else{
+            console.log(err);
+            res.redirect('appErr');
           }
         });
       }
@@ -81,7 +92,13 @@ app.post('/logout', function(req, res) {
 });
 
 
+<<<<<<< HEAD
 
 app.listen(3000, function () {
   console.log("server is running on port 3000");
+=======
+// local port
+app.listen(process.env.PORT|| 8080, function () {
+  console.log("server is running");
+>>>>>>> back-up
 });
