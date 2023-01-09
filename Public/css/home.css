@@ -28,6 +28,10 @@ body::-webkit-scrollbar-thumb {
 .hidden{
   display: none;
 }
+/* copyright  */
+.copyright{
+  padding: 25px 0;
+}
 /* application err */
 .err{
   text-align: center;
