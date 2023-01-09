@@ -91,11 +91,7 @@ app.post('/logout', function(req, res) {
   res.redirect('/');
 });
 
-app.listen(3000, function () {
-  console.log("server is running on port 3000");
-=======
 // local port
 app.listen(process.env.PORT|| 8080, function () {
   console.log("server is running");
->>>>>>> back-up
 });
