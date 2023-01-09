@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Data Base section
-mongoose.connect("mongodb+srv://walid-allane:walid-databased@cluster0.ithytpt.mongodb.net/?retryWrites=true&w=majority/webapplicationDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://walid-allane:walid-database@cluster0.ithytpt.mongodb.net/?retryWrites=true&w=majority/webapplicationDB", {useNewUrlParser: true});
 
 // schema to signUp
 const signUpSchema = new mongoose.Schema({
