@@ -293,4 +293,15 @@ ul{
     width: 100%;
     height: 155rem;
   }
+  .links{
+    top: 17rem;
+  }
+}
+@media (max-width:700px) {
+  .links{
+    top: 26rem;
+  }
+  .root-div{
+    height: 500px
+  }
 }

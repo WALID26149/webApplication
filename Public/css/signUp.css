@@ -49,6 +49,9 @@ a{
   border-radius: 5px;
   width: 273px;
 }
+.inp:focus{
+  outline: none;
+}
 label{
   display: block;
   padding: 10px 0;
