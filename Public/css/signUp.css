@@ -129,3 +129,8 @@ label{
   font-size: 20px;
   cursor: pointer;
 }
+@media (min-width:320px) and (max-width:480px) {
+  .container{
+    margin: 30% auto;
+  }
+}

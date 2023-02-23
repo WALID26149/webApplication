@@ -11,7 +11,7 @@ app.use(express.static("Public"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
   extended: true
-}));
+})) ;
 
 // Data Base section
 mongoose.connect("mongodb+srv://walid-allane:walid-database@cluster0.ithytpt.mongodb.net/test", {useNewUrlParser: true});
